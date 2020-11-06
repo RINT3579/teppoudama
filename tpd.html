@@ -1,12 +1,26 @@
 <html lang="ja"><head>
         <meta charset="UTF-8">
-        <title>実験ページトップ</title>
+        <title>論理エラーチェック</title>
     </head>
-    <body>あいうえお<br><br>
- 
-        <a href="./exercise_1/exercise_1.html">問題1</a><br>
-        <a href="./exercise_2/exercise_2.html">問題2</a><br>
-        <!-- <a href="./exercise_3/exercise_3.html">問題3</a><br> -->
+    <body>
+        <form action="result.php" method="post" enctype="multipart/form-data">
+            論理エラーの有無をチェックするための情報を入力するページです。<br>
+            以下のフォームを入力し、「チェック開始」ボタンを押してください。<br>
+            <br>
+            解答プログラム：
+            <input type="file" name="cpp_file" required=""><br>
+            学籍番号：
+            <input type="text" name="stu_num" required=""><br>
+            問題番号：
+            <select name="exercise_num" size="1" required="">
+                <option value="exercise_1">問題1</option>
+                <option value="exercise_2">問題2</option>
+                <option value="exercise_3">問題3</option>
+                <option value="exercise_4">問題4</option>
+                <option value="exercise_5">問題5</option>
+                <option value="exercise_6">問題6</option>
+            </select><br>
+            <input type="submit" value="チェック開始">
+        </form>
     
-
 </body></html>
